@@ -1,0 +1,871 @@
+body {
+    font-family: "Zen Old Mincho", serif;
+    color: #2A2A2A;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    width: 180px;
+}
+
+nav {
+    width: 200px;
+    height: 100vh;
+    font-size: 20px;
+    background-color: #DBC39A;
+    padding: 50px 30px;
+    position: fixed;
+    left: -300px;
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+.open nav {
+    left: 0;
+}
+
+.header-list li {
+    padding-top: 40px;
+}
+
+.header-list a:hover {
+    border-bottom: 1.5px solid;
+}
+
+
+
+/* toggle-btn */
+.toggle-btn {
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.toggle-btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 22%;
+}
+
+.toggle-btn span:nth-child(2) {
+    top: 50%;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 78%;
+}
+
+.mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+.open .toggle-btn span:nth-child(1) {
+    top: 50%;
+    transform: rotate(-315deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3) {
+    top: 50%;
+    transform: rotate(315deg);
+}
+
+.open .mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #DBC39A;
+    opacity: 0.8;
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+/* mainvisual */
+.sp {
+    display: none;
+}
+
+.main-slide img {
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    animation: slideAnime 18s ease infinite;
+}
+
+.main-slide {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+/*=== スライドのアニメーションを段差で開始する ========= */
+.main-slide img:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.main-slide img:nth-of-type(2) {
+    animation-delay: 4.5s;
+}
+
+.main-slide img:nth-of-type(3) {
+    animation-delay: 9s;
+}
+
+.main-slide img:nth-of-type(4) {
+    animation-delay: 12.5s;
+}
+
+/*=== スライドのアニメーション ========================= */
+@keyframes slideAnime {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.main-text {
+    max-width: 890px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.main-text1 {
+    font-size: 32px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-text2 {
+    font-size: 24px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.main-text3 {
+    font-size: 24px;
+    text-align: right;
+    padding-bottom: 200px;
+}
+
+/* top */
+.top-box {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 140px;
+}
+
+.top-topic {
+    position: relative;
+    width: 55%;
+    margin-right: -80px;
+}
+
+.top-box:nth-of-type(2) .top-topic {
+    margin-right: 0;
+    margin-left: -80px
+}
+
+.top-topic img {
+    height: 80%;
+    object-fit: cover;
+    max-width: 90%;
+}
+
+.top-title {
+    writing-mode: vertical-rl;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.top-title::after {
+    content: "";
+    width: 2px;
+    height: 120%;
+    background-color: #2A2A2A;
+    position: absolute;
+    writing-mode: vertical-rl;
+    top: 120%;
+    left: 50%;
+}
+
+.top-text {
+    width: 40%;
+    height: 300px;
+    background-color: #A7C796;
+    margin-top: 20%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-text p {
+    margin: 0 auto;
+    font-size: 20px;
+    padding-bottom: 40px;
+    line-height: 35px;
+}
+
+
+.top-text a {
+    margin: 0 auto;
+}
+
+.top-btn {
+    background-color: #D9D9D9;
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+
+.mainimg {
+    position: relative;
+}
+
+.mainimg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mainimg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mainimg-text p {
+    color: #2E4E3F;
+}
+
+.mainvisual-title {
+    font-size: 64px;
+}
+
+.about-title {
+    writing-mode: vertical-rl;
+}
+
+.about-text {
+    writing-mode: vertical-rl;
+}
+
+.about-page1 {
+    max-width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20%;
+}
+
+.about-page1 img {
+    width: 640px;
+    padding-right: 100px;
+}
+
+.page1-text {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1.5px solid;
+    padding-top: 180px;
+    margin-top: 150px;
+    line-height: 1.5px;
+}
+
+.about-title {
+    font-size: 24px;
+    padding-left: 60px;
+    line-height: 40px;
+}
+
+.about-text {
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.about-page2 {
+    max-width: 1100px;
+    padding-top: 20%;
+    margin-left: auto;
+}
+
+.wedding {
+    height: 400px;
+    object-fit: cover;
+}
+
+.page2-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.page2-texts {
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.page2-text-img {
+    width: 25%;
+    padding-top: 20px;
+}
+
+.page2-text-img img {
+    height: 350px;
+}
+
+/* party */
+
+.slick-list {
+    overflow: visible;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 2%;
+}
+
+.party-list {
+    padding-top: 20%;
+}
+
+
+.party-rooms {
+    display: flex;
+    align-items: center;
+    padding-bottom: 150px;
+    border-bottom: 1.2px solid;
+    margin-top: 150px;
+}
+
+.party-rooms:last-child {
+    border: none;
+}
+
+.party-list-text {
+    width: 25%;
+}
+
+.room-ruby {
+    padding-top: 8%;
+}
+
+.party-list-imgs {
+    width: 65%;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.party-left-imgs {
+    width: 65%;
+    overflow: hidden;
+    margin-right: auto;
+}
+
+.party-list-img {
+    overflow: visible;
+    margin-right: 80px;
+}
+
+.party-list-img .slick-slide {
+    margin-right: 40px;
+}
+
+.party-left-img {
+    overflow: visible;
+    margin-left: 80px;
+}
+
+.party-left-img .slick-slide {
+    margin-left: 40px
+}
+
+.room-name {
+    font-size: 36px;
+}
+
+.room-title {
+    font-size: 20px;
+    padding: 90px 0 40px;
+}
+
+.party-list:nth-child(3) {
+    flex-direction: column-reverse;
+}
+
+/* cuisein */
+.cuisein .mainimg .mainimg-text p {
+    color: #FAF1EA;
+}
+
+.sp-only {
+    display: none;
+}
+
+.cuisine-list {
+    display: flex;
+    margin-top: 180px;
+    margin-bottom: 250px;
+}
+
+.cuisine-img {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cuisine-img-right {
+    width: 60%;
+    padding-right: 50px;
+}
+
+.cuisine-img-left {
+    width: 35%;
+}
+
+.cuisine-text {
+    writing-mode: vertical-rl;
+    line-height: 45px;
+}
+
+.cuisine-text p {
+    font-size: 32px;
+    padding-right: 20px;
+    padding-top: 60px;
+}
+
+.cuisine-text-top {
+    font-size: 40px;
+}
+
+.cuisinecommit {
+    max-width: 1200px;
+    margin-left: auto;
+    padding-left: 2%;
+}
+
+.cuisine-commitment1 {
+    display: flex;
+    margin-bottom: 4%;
+}
+
+.cuisinecommit h3 {
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.cuisinecommit h4 {
+    font-size: 24px;
+}
+
+.cuisine-commitment-text {
+    line-height: 26px;
+    width: 65%;
+
+}
+
+.cuisine-commitment-text p {
+    padding-top: 35px;
+    font-size: 16px;
+}
+
+.cuisine-commitment-img {
+    width: 35%;
+}
+
+.cuisine-commitment-img img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cuisine-commitment-img2 {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    margin-top: -60px;
+}
+
+.cuisine-commitment-img2 img {
+    object-fit: cover
+}
+
+.commitment1 {
+    width: 35%;
+    padding-right: 25px;
+}
+
+.commitment2 {
+    width: 65%;
+    z-index: 3;
+}
+
+h8 {
+    font-size: 24px;
+}
+
+.cuisine-season {
+    padding-top: 100px;
+    margin-left: auto;
+}
+
+.cuisine-season p {
+    padding-top: 35px;
+    line-height: 26px;
+}
+
+/* footer */
+footer {
+    background-color: #DBC39A;
+    text-align: center;
+    padding-block: 15%;
+    margin-top: 15%;
+}
+
+.logo {
+    width: 45%;
+}
+
+.address,
+.time {
+    font-size: 20px;
+    padding-top: 3%;
+}
+
+.tel {
+    font-size: 40px;
+    padding-top: 2%;
+}
+
+.to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #437149;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    right: 25px;
+    bottom: 25px;
+}
+
+.to-top::after {
+    content: "";
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position: relative;
+}
+
+
+@media (max-width:900px) {
+    .main-text {
+        padding-inline: 10px;
+    }
+
+    .top {
+        padding-inline: 20px;
+    }
+
+
+    .top-topic {
+        width: 85%;
+    }
+
+    .top-box:nth-of-type(2) .top-topic {
+        margin-left: 120px;
+    }
+
+    .top-box {
+        flex-direction: column;
+    }
+
+    .top-box:nth-of-type(2) {
+        flex-direction: column-reverse;
+        margin-left: 120px;
+    }
+
+    .top-title {
+        writing-mode: vertical-rl;
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .top-text {
+        width: 73%;
+        height: 240px;
+        margin-top: -10%;
+        margin-left: 222px;
+        padding-top: 50px;
+    }
+
+    .top-box:nth-of-type(2) .top-text {
+        margin-left: -120px;
+        padding-top: 50px;
+        width: 73%;
+        height: 240px;
+        margin-top: -10%;
+    }
+
+    /* about */
+    .about-page1 {
+        display: block;
+    }
+
+    .about-page1 img {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .page1-text {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 60px;
+        justify-content: center;
+    }
+
+    .page2-text {
+        justify-content: center;
+    }
+
+    .page2-text-img img {
+        display: none;
+    }
+
+    .page2-text-img {
+        width: 0;
+        padding-top: 0;
+    }
+
+    /* party */
+    .room-title {
+        padding: 20px 0 20px;
+    }
+
+    .party-list-img {
+        margin-right: 0;
+    }
+
+    .party-left-img {
+        margin-left: 0;
+    }
+
+    /* cuisine */
+
+    .cuisine-list {
+        display: block;
+        padding-inline: 20px;
+    }
+
+    .cuisine-text {
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    .cuisinecommit {
+        padding-inline: 20px;
+    }
+
+    .cuisine-commitment-img {
+        margin-top: -40px;
+    }
+
+    .cuisine-commitment-img img {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+
+    .cuisine-commitment-img2 {
+        margin-top: 0;
+    }
+
+
+    footer {
+        padding-block: 25%;
+    }
+}
+
+@media (max-width:480px) {
+
+    /* index */
+    .sp {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .top-topic {
+        width: 100%;
+    }
+
+    .top-text,
+    .top-box:nth-of-type(2) .top-text {
+        margin-left: 0px;
+        width: 90%;
+        margin-top: 2%;
+        height: auto;
+        padding: 4%;
+    }
+
+    .top-box:nth-of-type(2) {
+        margin-left: 0;
+    }
+
+    .top-box:nth-of-type(2) .top-topic {
+        margin-left: 0;
+    }
+
+    .top-box:nth-of-type(2) .top-text {
+        margin-left: 0;
+    }
+
+    /* about */
+    .container {
+        padding-inline: 7%;
+    }
+
+    .page2-texts {
+        display: block;
+    }
+
+    .page2-texts .about-text {
+        writing-mode: horizontal-tb;
+    }
+
+    .page2-texts .about-title {
+        writing-mode: horizontal-tb;
+        padding-left: 0;
+    }
+
+
+    /* party */
+    .party-rooms {
+        flex-direction: column;
+    }
+
+    .party-rooms:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .party-rooms,
+    .party-list-imgs,
+    .party-left-imgs {
+        width: 100%;
+    }
+
+    .party-left-img .slick-slide {
+        margin-left: 0;
+        margin-top: 1%;
+    }
+
+    .party-left-imgs {
+        width: 100%;
+    }
+
+    .party-list-img .slick-slide {
+        margin-right: 0;
+        margin-top: 1%;
+    }
+
+    .party-list-imgs {
+        width: 100%;
+    }
+
+    .party-list-text {
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    /* cuisein */
+    .pc-only {
+        display: none;
+    }
+
+    .sp-only {
+        display: block;
+    }
+
+    .cuisine-commitment-img {
+        display: none;
+    }
+
+    .cuisine-commitment-text {
+        width: 100%;
+    }
+
+    footer {
+        /* height: 25vh; */
+    }
+}
