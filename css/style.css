@@ -855,6 +855,10 @@ footer {
         display: block;
     }
 
+    .cuisine-img {
+        width: 100%;
+    }
+
     .cuisine-commitment-img {
         display: none;
     }
