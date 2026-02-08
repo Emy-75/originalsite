@@ -493,6 +493,7 @@ nav {
 
 .cuisine-text {
     writing-mode: vertical-rl;
+    height: auto;
 }
 
 .cuisine-text p {
