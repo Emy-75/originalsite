@@ -484,7 +484,7 @@ nav {
 
 .cuisine-img-right {
     width: 60%;
-    padding-right: 50px;
+    padding-right: 5%;
 }
 
 .cuisine-img-left {
@@ -550,7 +550,6 @@ nav {
     width: 100%;
     height: 350px;
     display: flex;
-    margin-top: -60px;
 }
 
 .cuisine-commitment-img2 img {
@@ -559,7 +558,7 @@ nav {
 
 .commitment1 {
     width: 35%;
-    padding-right: 25px;
+    padding-right: 3%;
 }
 
 .commitment2 {
@@ -859,6 +858,10 @@ footer {
 
     .cuisine-commitment-img {
         display: none;
+    }
+
+    .commitment2 {
+        width: 62%;
     }
 
     .cuisine-commitment-text {
