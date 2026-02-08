@@ -479,12 +479,12 @@ nav {
 .cuisine-img {
     display: flex;
     object-fit: cover;
-    width: 100%;
+    width: 80%;
 }
 
 .cuisine-img-right {
     width: 60%;
-    padding-right: 5%;
+    padding-right: 3%;
 }
 
 .cuisine-img-left {
@@ -493,7 +493,6 @@ nav {
 
 .cuisine-text {
     writing-mode: vertical-rl;
-    line-height: 45px;
 }
 
 .cuisine-text p {
