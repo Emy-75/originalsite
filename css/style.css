@@ -479,7 +479,7 @@ nav {
 .cuisine-img {
     display: flex;
     object-fit: cover;
-    width: 80%;
+    width: 90%;
 }
 
 .cuisine-img-right {
@@ -720,7 +720,7 @@ footer {
     /* cuisine */
 
     .cuisine-list {
-        display: block;
+        flex-direction: column;
         padding-inline: 20px;
     }
 
@@ -854,10 +854,6 @@ footer {
 
     .sp-only {
         display: block;
-    }
-
-    .cuisine-img {
-        width: 100%;
     }
 
     .cuisine-commitment-img {
