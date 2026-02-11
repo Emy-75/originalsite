@@ -479,7 +479,7 @@ nav {
 .cuisine-img {
     display: flex;
     object-fit: cover;
-    width: 90%;
+    width: 100%;
 }
 
 .cuisine-img-right {
